@@ -1,0 +1,20 @@
+CREATE TABLE `price_alerts` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`userId` int NOT NULL,
+	`symbol` varchar(32) NOT NULL,
+	`displaySymbol` varchar(32) NOT NULL,
+	`assetClass` enum('STOCK','FOREX') NOT NULL DEFAULT 'FOREX',
+	`direction` enum('LONG','SHORT','CALL','PUT') NOT NULL,
+	`targetPrice` decimal(18,6) NOT NULL,
+	`currentPrice` decimal(18,6) NOT NULL,
+	`proximityPct` decimal(5,2) NOT NULL DEFAULT '0.5',
+	`timeframe` varchar(8) NOT NULL DEFAULT '4H',
+	`pattern` varchar(128),
+	`notes` text,
+	`isActive` tinyint NOT NULL DEFAULT 1,
+	`isTriggered` tinyint NOT NULL DEFAULT 0,
+	`triggeredAt` timestamp,
+	`createdAt` timestamp NOT NULL DEFAULT (now()),
+	`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+	CONSTRAINT `price_alerts_id` PRIMARY KEY(`id`)
+);

@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1774931603531,
+      "tag": "0000_premium_silver_samurai",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1774931666751,
+      "tag": "0001_powerful_namorita",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1774935210056,
+      "tag": "0002_icy_golden_guardian",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1774936624536,
+      "tag": "0003_romantic_cerise",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1774940314177,
+      "tag": "0004_stiff_puff_adder",
+      "breakpoints": true
+    }
+  ]
+}

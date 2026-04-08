@@ -1,0 +1,20 @@
+CREATE TABLE `watchlist` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`userId` int NOT NULL,
+	`symbol` varchar(20) NOT NULL,
+	`displaySymbol` varchar(30) NOT NULL,
+	`assetClass` enum('STOCK','FOREX') NOT NULL DEFAULT 'FOREX',
+	`timeframe` varchar(10) NOT NULL DEFAULT '4H',
+	`notes` text,
+	`keyLevel1` varchar(30),
+	`keyLevel1Label` varchar(50),
+	`keyLevel2` varchar(30),
+	`keyLevel2Label` varchar(50),
+	`keyLevel3` varchar(30),
+	`keyLevel3Label` varchar(50),
+	`bias` enum('BULLISH','BEARISH','NEUTRAL') DEFAULT 'NEUTRAL',
+	`tags` text,
+	`createdAt` timestamp NOT NULL DEFAULT (now()),
+	`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+	CONSTRAINT `watchlist_id` PRIMARY KEY(`id`)
+);
